@@ -1,86 +1,78 @@
-# Tennis Match Analysis Project
+# 🎾 Tennis Match Analysis Project
 
-## Overview
-This project leverages **Computer Vision** techniques to analyze tennis match videos by detecting players and the ball, tracking their movements, and calculating various statistics. It utilizes **deep learning models**, including **YOLO** for object detection and **ResNet50** for court line detection. The system also provides a **mini-court representation** for better visualization.
+## 📌 Overview
+This project focuses on analyzing tennis match videos using **Computer Vision** techniques. It leverages deep learning models to detect players, track the ball, and extract key statistics such as shot speed and player movements. The system also maps real-world positions to a **mini-court representation** for enhanced visualization.
 
-## Features
-- **Video Processing**: Read input video frames and save the processed output video.
-- **Player and Ball Detection**: Detect players and the ball using YOLO models.
-- **Court Line Detection**: Identify court lines and keypoints using a pre-trained **ResNet50 model**.
-- **Mini-Court Representation**: Convert detected positions to a smaller court representation.
-- **Statistics Calculation**: Compute player and ball speeds, shot speeds, and other match statistics.
-- **Visualization**: Overlay bounding boxes, court keypoints, mini-court positions, and statistics on video frames.
+## ✨ Key Features
+- **🎥 Video Processing**: Reads input video frames and saves processed output.
+- **🤖 Computer Vision-based Detection**:
+  - Player and ball detection using **YOLOv5**.
+  - Court line detection via a **ResNet50-based model**.
+- **🏆 Mini-Court Representation**: Converts player and ball positions into a scaled-down mini-court visualization.
+- **📊 Statistics Calculation**:
+  - Shot speed calculation.
+  - Player movement tracking & speed estimation.
+  - Aggregated match statistics.
+- **📌 Visual Enhancements**:
+  - Bounding boxes for players & ball.
+  - Court keypoint annotations.
+  - Mini-court overlay visualization.
 
-## Directory Structure
+## 🏗️ Project Structure
 ```
 TENNIS ANALYSIS
-│── court_line_detector/      # Court line detection logic
-│── input_videos/             # Folder for input match videos
-│── mini_court/               # Code for mini-court conversion
-│   ├── __init__.py
-│   ├── mini_court.py
-│── models/                   # Pre-trained models for detection
-│   ├── keypoints_model.pth
-│   ├── yolo5_best.pt
-│── output_videos/            # Processed video outputs
-│   ├── output_video.avi
-│── tracker_stubs/            # Stub files for object tracking
-│   ├── ball_detections.pkl
-│   ├── player_detections.pkl
-│── trackers/                 # Tracking algorithms
-│── training/                 # Training scripts and datasets
-│   ├── tennis-ball-detection-6/
-│   ├── tennis_ball_detector_training.ipynb
-│   ├── tennis_court_keypoints_training.ipynb
-│── utils/                    # Utility functions
-│── main.py                   # Entry point of the project
-│── yolo_inference.py         # YOLO inference script
-│── yolov8x.pt                # YOLOv8 model file
+│── court_line_detector/         # Court line detection module
+│── input_videos/                # Folder to store input videos
+│── mini_court/                  # Mini-court representation
+│   │── __init__.py
+│   │── mini_court.py
+│── models/                      # Pre-trained models
+│   │── keypoints_model.pth       # Court keypoints model
+│   │── yolo5_best.pt             # YOLOv5 trained model
+│── output_videos/               # Processed video outputs
+│   │── output_video.avi
+│── tracker_stubs/               # Detection outputs
+│   │── ball_detections.pkl
+│   │── player_detections.pkl
+│── trackers/                    # Object tracking utilities
+│── training/                     # Training scripts & notebooks
+│── utils/                        # Utility scripts
+│── main.py                       # Entry point of the application
+│── yolo_inference.py             # YOLO inference script
+│── yolov8x.pt                    # YOLOv8 model (optional)
 ```
 
-## Installation & Setup
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.8+
-- OpenCV
-- PyTorch
-- TensorFlow (if needed for additional models)
-- YOLO dependencies (`ultralytics` for YOLOv8)
+## 📦 Dependencies
+To run this project, install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
 
-### Installation Steps
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo-name/tennis-analysis.git
-   cd tennis-analysis
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Place input videos in the `input_videos/` folder.
-4. Run the main script:
-   ```sh
-   python main.py
-   ```
+## 🚀 Usage
+Run the main script to analyze an input tennis match video:
+```bash
+python main.py --input input_videos/match.mp4 --output output_videos/output.mp4
+```
 
-## Usage
-1. **Run `main.py`** to process a match video.
-2. **Results**: The processed video with overlays will be saved in `output_videos/`.
-3. **Training**: If needed, retrain the models using notebooks in `training/`.
+## 📂 Dataset & Pre-trained Models
+### 🎾 Roboflow Tennis Dataset
+This project uses the **Roboflow Tennis Ball Detection Dataset**:
+🔗 [Roboflow Dataset Link](https://universe.roboflow.com/viren-dhanwani/tennis-ball-detection)
 
-## Model Details
-- **YOLO** is used for **player and ball detection**.
-- **ResNet50** is used for **court keypoint detection**.
-- Tracking is implemented using **custom tracking algorithms**.
+### 🏆 Pre-trained Models
+1. **Trained YOLOv5 Model** for Player & Ball Detection  
+   🔗 [Download YOLOv5 Model](https://drive.google.com/file/d/1UZwiG1jkWgce9lNhxJ2L0NVjX1vGM05U/view?usp=sharing)
 
-## Future Enhancements
-- Improve player tracking accuracy with Kalman Filters.
-- Add real-time processing capabilities.
-- Implement a dashboard for match statistics visualization.
+2. **Trained Court Keypoints Model**  
+   🔗 [Download Keypoints Model](https://drive.google.com/file/d/1QrTOF1ToQ4plsSZbkBs3zOLkVt3MBlta/view?usp=sharing)
 
-## Contributors
-- **Abhishek Sarkar** - ML Enthusiast
+## Output Video  
+![Output Video](output_videos/output_video.mp4)
 
 
-## License
-This project is licensed under the MIT License. See `LICENSE` for details.
+
+## 📜 License
+This project is open-source and available under the **MIT License**.
+
+---
+🚀 **Developed with Computer Vision & Deep Learning for Tennis Analysis!** 🎾
