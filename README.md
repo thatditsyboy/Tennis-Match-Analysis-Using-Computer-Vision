@@ -42,17 +42,6 @@ TENNIS ANALYSIS
 │── yolov8x.pt                    # YOLOv8 model (optional)
 ```
 
-## 📦 Dependencies
-To run this project, install the required Python packages:
-```bash
-pip install -r requirements.txt
-```
-
-## 🚀 Usage
-Run the main script to analyze an input tennis match video:
-```bash
-python main.py --input input_videos/match.mp4 --output output_videos/output.mp4
-```
 
 ## 📂 Dataset & Pre-trained Models
 ### 🎾 Roboflow Tennis Dataset
