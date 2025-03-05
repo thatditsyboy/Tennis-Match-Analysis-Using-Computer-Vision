@@ -79,8 +79,8 @@ Ensure you have the following installed:
 - Implement a dashboard for match statistics visualization.
 
 ## Contributors
-- **Your Name** - Developer & Researcher
-- **Team Members** (if applicable)
+- **Abhishek Sarkar** - ML Enthusiast
+
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
