@@ -1,4 +1,4 @@
-# 🎾 Tennis Match Analysis Project
+# 🎾 Tennis Match Analysis Using Computer Vision
 
 ## 📌 Overview
 This project focuses on analyzing tennis match videos using **Computer Vision** techniques. It leverages deep learning models to detect players, track the ball, and extract key statistics such as shot speed and player movements. The system also maps real-world positions to a **mini-court representation** for enhanced visualization.
